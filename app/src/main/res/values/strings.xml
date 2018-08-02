@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">DAH</string>
+    <string name="action_settings">Settings</string>
+    <string-array name="profile">
+        <item>Silent</item>
+        <item>Ringing</item>
+        <item>Vibration</item>
+    </string-array>
+</resources>

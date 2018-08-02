@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent">
+
+    <EditText
+        android:layout_width="183dp"
+        android:layout_height="60dp"
+        android:imeOptions="actionGo"
+        android:singleLine="true"
+        android:id="@+id/TFaddress"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <ImageButton
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/mapsearch"
+        android:id="@+id/Bsearch"
+        android:layout_gravity="right"
+        android:scaleType="fitXY"
+        android:background="@android:color/transparent"
+        android:onClick="onSearch"
+        android:layout_alignTop="@+id/TFaddress"
+        android:layout_toStartOf="@+id/Btype"
+        android:layout_marginEnd="35dp"
+        android:layout_above="@+id/map" />
+
+    <ImageButton
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/maptype"
+        android:id="@+id/Btype"
+        android:scaleType="fitXY"
+        android:background="@android:color/transparent"
+        android:layout_gravity="right"
+        android:nestedScrollingEnabled="false"
+        android:onClick="changeType"
+        android:layout_alignTop="@+id/Bsearch"
+        android:layout_alignParentEnd="true"
+        android:layout_above="@+id/map" />
+
+        <ImageButton
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/ok2"
+            android:src="@drawable/ok"
+            android:scaleType="fitXY"
+            android:onClick="ondone"
+            android:background="@android:color/transparent"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/map"
+            android:layout_centerHorizontal="true" />
+
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="470dp"
+        android:id="@+id/map"
+        tools:context=".MapsActivity"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_gravity="bottom"
+        android:layout_below="@+id/TFaddress"
+        android:layout_alignEnd="@+id/Btype" />
+
+    </RelativeLayout>
+</ScrollView>
